@@ -73,7 +73,27 @@
 .header{
     grid-row: 1/2;
     grid-column: 2/4;
-    background-color: blue
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding:20px;
+}
+
+input{
+    width: 85%;
+    border: 0px;
+    background-color: rgb(233, 233, 237);
+    border-radius: 20px;    
+}
+
+.searchBar{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .top{
