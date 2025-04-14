@@ -111,5 +111,30 @@ input{
 .sides{
     grid-row: 3/4;
     grid-column: 3/4;
-    background-color: deeppink;
+    background-color: rgb(157, 157, 157);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+    
+}
+
+.announcements{
+    display: grid;
+    grid-template-rows: 2fr 8fr;
+}
+
+.trending{
+    display: grid;
+    grid-template-rows: 2fr 8fr;
+}
+
+.smallsA, .smallsT{
+    font-size: smaller;
+}
+
+.smallsA{
+    background-color: aliceblue;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 15px;
 }
