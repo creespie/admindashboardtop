@@ -49,14 +49,13 @@
 
 
 .container{
-    position: fixed;
     width: 100%;
-    height: 100%;
+    height: 80%;
     left: 0;
     top: 0;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 2fr 10fr;
+    grid-template-rows: 1fr 1fr 10fr;
     
 }
 
@@ -115,6 +114,7 @@ input{
     display: grid;
     grid-template-rows: 1fr 1fr;
     padding: 20px;
+    gap: 30px;
     
 }
 
@@ -130,6 +130,8 @@ input{
 
 .smallsA, .smallsT{
     font-size: smaller;
+    border-radius: 10px;
+    text-overflow: ellipsis;
 }
 
 .smallsA{
@@ -137,4 +139,34 @@ input{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     padding: 15px;
+}
+
+.mid{
+   border: 0px;
+   border-top: 1px;
+   border-bottom: 1px;
+   border-style: solid;
+   border-color: rgb(198, 198, 198);
+}
+    
+.smallsT{
+    background-color: aliceblue;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 15px;  
+}
+
+.bar{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.name{
+    font-weight: 550;
+}
+
+h3, p{
+    padding: 5px;
 }
