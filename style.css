@@ -47,16 +47,20 @@
     isolation: isolate;
   }
 
+  html, body {
+    height: 100%;
+  }
+
 
 .container{
     width: 100%;
-    height: 80%;
+    height: 100%;
     left: 0;
     top: 0;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 1fr 10fr;
-    
+    overflow: hidden;
 }
 
 .dashboard{
@@ -130,24 +134,37 @@ button{
     grid-template-rows: 1fr 1fr;
     padding: 20px;
     gap: 30px;
+    overflow: hidden;
+    height: 100%;
     
 }
 
 .announcements{
     display: grid;
     grid-template-rows: 2fr 8fr;
+    overflow: hidden;
+    height: 100%;
 }
 
 .trending{
     display: grid;
     grid-template-rows: 2fr 8fr;
+    overflow: hidden;
+    height: 100%;
 }
 
 .smallsA, .smallsT{
     font-size: smaller;
     border-radius: 10px;
-    text-overflow: ellipsis;
+    min-width: 0;
 }
+
+.smallsA p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
 
 .smallsA{
     background-color: aliceblue;
@@ -155,6 +172,12 @@ button{
     grid-template-rows: 1fr 1fr 1fr;
     padding: 15px;
 }
+
+.smallsA > div {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;  
+  }
 
 .mid{
    border: 0px;
