@@ -60,7 +60,7 @@
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 1fr 10fr;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .dashboard{
@@ -102,13 +102,16 @@ input{
 .top{
     grid-row: 2/3;
     grid-column: 2/4;
-    background-color: aliceblue;
+    background-color: white;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
     align-items: center;
     justify-content: center;
     padding: 10px;
     gap: 5px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 3px 3px 3px rgb(228, 228, 228);
 }
 
 button{
@@ -123,13 +126,56 @@ button{
 .articles{
     grid-row: 3/4;
     grid-column: 2/3;
-    background-color: green
+    background-color:  rgb(234, 239, 255);
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    min-width: 0; 
+    overflow: hidden;
+}
+
+.quadr{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    padding: 15px;
+    gap: 15px;
+    min-width: 0; 
+    overflow: hidden;   
+}
+
+.projName{
+    padding: 15px;
+}
+
+.quadrants{
+    min-width: 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 0px;
+    border-left: 15px;
+    border-left-color: yellow;
+    border-style: solid;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    box-shadow: 3px 3px 3px rgb(228, 228, 228);
+}
+
+.artContent{
+    overflow: hidden;
+    max-width: 100%;
+    height: 60%;
+}
+
+.artButton{
+    align-self: flex-end;
 }
 
 .sides{
     grid-row: 3/4;
     grid-column: 3/4;
-    background-color: rgb(157, 157, 157);
+    background-color: rgb(234, 239, 255);
     display: grid;
     grid-template-rows: 1fr 1fr;
     padding: 20px;
@@ -142,14 +188,12 @@ button{
 .announcements{
     display: grid;
     grid-template-rows: 2fr 8fr;
-    overflow: hidden;
     height: 100%;
 }
 
 .trending{
     display: grid;
     grid-template-rows: 2fr 8fr;
-    overflow: hidden;
     height: 100%;
 }
 
@@ -157,6 +201,11 @@ button{
     font-size: smaller;
     border-radius: 10px;
     min-width: 0;
+    box-shadow: 3px 3px 3px rgb(228, 228, 228);
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 15px;
 }
 
 .smallsA p {
@@ -165,13 +214,6 @@ button{
     text-overflow: ellipsis;
     max-width: 100%;
   }
-
-.smallsA{
-    background-color: aliceblue;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    padding: 15px;
-}
 
 .smallsA > div {
     display: flex;
@@ -186,13 +228,6 @@ button{
    border-style: solid;
    border-color: rgb(198, 198, 198);
 }
-    
-.smallsT{
-    background-color: aliceblue;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    padding: 15px;  
-}
 
 .bar{
     display: flex;
@@ -203,8 +238,4 @@ button{
 
 .name{
     font-weight: 550;
-}
-
-h3, p{
-    padding: 5px;
 }
